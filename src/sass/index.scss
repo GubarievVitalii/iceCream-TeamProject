@@ -1,2 +1,19 @@
-@import './common';
-@import './example';
+@import './components/body';
+@import './var/root';
+@import './var/visually-hidden';
+@import './var/mixinns';
+@import './components/container';
+@import './components/header';
+@import './components/mob-menu';
+@import './components/main/hero';
+@import './components/main/about';
+@import './components/main/advantages';
+@import './components/main/gallery';
+@import './components/main/customer-reviews';
+@import './components/main/contacts';
+@import './components/footer';
+@import './components/modal/modal-1';
+@import './components/modal/modal-2';
+@import './components/modal/modal-3';
+@import './components/modal/modal-4';
+
