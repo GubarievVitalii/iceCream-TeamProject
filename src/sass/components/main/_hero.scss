@@ -37,7 +37,7 @@
 
   @include desktop {
     left: 60%;
-    top: -107px;
+    top: -90px;
     width: 534px;
     transform: translate(-50%);
   }
@@ -199,6 +199,8 @@
   font-weight: 400;
   font-size: 8px;
   line-height: 0.8;
+
+  display: block;
 
   padding: 8px 14px;
   border-radius: 20px;
