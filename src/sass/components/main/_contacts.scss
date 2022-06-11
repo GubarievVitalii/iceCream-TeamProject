@@ -9,12 +9,12 @@
     background: linear-gradient(to bottom, #FFFFFF 23%, #FFF5F6 23%);
     padding-bottom: 24px;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         background: linear-gradient(to bottom, #FFFFFF 20%, #FFF5F6 20%);
         padding-bottom: 20px;
     }
     
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         background: linear-gradient(to bottom, #FFFFFF 15%, #FFF5F6 15%);
         padding-bottom: 60px;
     }
@@ -23,12 +23,13 @@
 .contacts__list {
     margin-bottom: 32px;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
     }
-    @include desktop {
+
+    @media screen and (min-width: 1280px) {
         margin-bottom: 60px;
     }
 }
@@ -39,17 +40,17 @@
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     padding: 40px 32px;
-@media screen and (max-width:767px){
-    margin-left: auto;
-    margin-right: auto;
-}
 
-    
-    @include tablet {
-            width: 224px;
-        }
+    @media screen and (max-width:767px){
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    @include desktop {
+    @media screen and (min-width: 768px) {
+        width: 224px;
+    }
+
+    @media screen and (min-width: 1280px) {
         width: 395px;
         padding: 40px;
     }
@@ -60,7 +61,7 @@
         margin-bottom: 20px;
     }
     
-    @include tablet {
+    @media screen and (min-width: 768px) {
         margin-right: 32px;
     }
 }
@@ -75,7 +76,7 @@
     text-align: center;
     margin-bottom: 20px;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         font-size: 16px;
         line-height: 1.86; 
         border-radius: 6px;
@@ -87,7 +88,7 @@
     width: 80px;
     background-color: #F0D1A5;
 
-    @include tablet {        
+    @media screen and (min-width: 768px) {        
         width: 73px;
     }
 }
@@ -96,7 +97,7 @@
     width: 130px;
     background-color: #C2E297;
 
-    @include tablet {        
+    @media screen and (min-width: 768px) {        
         width: 138px;
     }
 }
@@ -108,11 +109,11 @@
     letter-spacing: 0.04em;
     color: #000000;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         font-size: 14px;
     }
     
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         font-size: 16px;
     }
 }
@@ -124,12 +125,12 @@
     letter-spacing: 0.04em;
     color: #907E82;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.66;
     }
 
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         font-weight: 500;
         font-size: 16px;
     }
@@ -144,7 +145,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         margin-top: 32px;
         margin-bottom: 32px;
     }
@@ -157,12 +158,12 @@
     letter-spacing: 0.04em;
     color: #000000;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.86;
     }
 
-    @include desktop {
+    @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: 1.86;
     }
@@ -171,7 +172,7 @@
 .contacts__working-days--style {
     margin-top: 8px;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         margin-top: 12px;
     }
 }
@@ -183,12 +184,12 @@
     letter-spacing: 0.04em;
     color: #FFA5BA;
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.86;
     }
     
-    @include desktop {
+    @media screen and (min-width: 1280px){
         font-size: 16px;
         line-height: 1.86;
     }
@@ -203,7 +204,7 @@
     margin-top: 24px;
     margin-bottom: 24px;
     
-    @include tablet {
+    @media screen and (min-width: 768px) {
         margin-top: 32px;
         margin-bottom: 32px;
     }
@@ -216,19 +217,19 @@
     line-height: 1.5;
     color: #907E82;
 
-@include tablet {
+    @media screen and (min-width: 768px) {
         font-size: 14px;
         line-height: 1.83;
     }
 
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         font-size: 16px;
         line-height: 1.83;
     }
 }
 
 .contacts__wrapper {
-    @include tablet {
+    @media screen and (min-width: 768px) {
         display: flex;
         justify-content: center;
     }
@@ -261,15 +262,14 @@
         margin-bottom: 10px;
     }
 
-    @include tablet {
+    @media screen and (min-width: 768px) {
         width: 192px;
         margin-right: 15px;
     }
 
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         width: 198px;
     }
-
 }
 
 .contacts__button-locations--style:hover,
@@ -277,19 +277,17 @@
     background-color: #D41342;
 }
 
-
-
 .contacts__button-franchise--style {    
     background-color: #FFFFFF;
     color: #D41443;
     width: 162px;
     height: 44px;
     
-    @include tablet {
+    @media screen and (min-width: 768px) {
         width: 175px;
     }
     
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         width: 180px;
     }
 }
@@ -302,7 +300,15 @@
 .button-arrow {
     margin-left: 13px;
 
-    @include desktop {
+    @media screen and (min-width: 1280px) {
         margin-left: 14px;
     }
+}
+
+.arrow--white {
+    fill: #FFFFFF;
+}
+
+.arrow--red {
+    fill: #D41342;
 }
