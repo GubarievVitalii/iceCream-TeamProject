@@ -2,30 +2,88 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.customer-reviews{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 
 .customer-reviews__item{
-    max-width: 180px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .customer-reviews__img{
-    margin: 0 auto;
-    font-weight: 500;
-font-size: 12px;
-line-height: 255%;
-/* or 31px */
+    margin: 0 auto 75px auto;
+    @include tablet {
+    margin: 0 auto 60px auto;} 
+    @include desktop {
+    margin: 0 auto 47px auto;}    
+}
 
-text-align: center;
-
-color: #000000;
+.customer-reviews__decor{
+    max-width: 180px;
+    position: relative;
+    &::before {
+        content: "";
+        display: block;
+        width: 54px;
+        height: 40px;
+        background-image: url("/src/images/comments/quotes-1x.png");
+        background-repeat: no-repeat;
+        top: 20px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 4px;
+        background-image: url("/src/images/comments/product-3.png");
+        background-repeat: no-repeat;
+        margin: 32px auto 16px auto;}
+    @include tablet {
+        max-width: 620px;
+        &:after {
+            margin: 40px auto 16px auto;}
+    }
+    @include desktop {
+        max-width: 820px;
+        &:after {
+            margin: 60px auto 16px auto;}
+    }
+    
 }
 
 .customer-reviews__par{
+    padding: 0 10px 0 10px;
+    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 250%;
     text-align: center;
-    color: #000000;
-    background: repeating-linear-gradient(to bottom, #ffffff 0px, #ffffff 30px, #e1e1e1 30px, #e1e1e1 31px);
-    
+    background: repeating-linear-gradient(to bottom, #ffffff 0px, #ffffff 29px, #e1e1e1 29px, #e1e1e1 30px);
+    @include tablet {
+        padding: 0 50px 0 50px;
+        font-size: 14px;
+        line-height: 216%;
+        letter-spacing: 0.04em;
+        }
+    @include desktop {
+        padding: 0 35px 0 35px;
+        font-size: 16px;
+        line-height: 186%;
+        background: repeating-linear-gradient(to bottom, #ffffff 0px, #ffffff 28px, #e1e1e1 28px, #e1e1e1 29px);}
+}
+
+.customer-reviews__header{
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 186%;
+    text-align: center; 
+    @include tablet {
+        font-size: 16px;}
+    @include desktop {
+        font-size: 20px;}   
 }
