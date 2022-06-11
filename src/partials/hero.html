@@ -1,5 +1,89 @@
-<div class="hero">
+<section class="hero">
     <div class="container">
-        <H2>hero</H2>
+        <picture class="hero--ellipse-pic">
+            <source srcset="
+                ./images/hero/ellipse-desktop.png    1x,
+                ./images/hero/ellipse-desktop-2x.png 2x" media="(min-width:1280px)" />
+            <source srcset="
+                ./images/hero/ellipse-tablet.png    1x,
+                ./images/hero/ellipse-tablet-2x.png 2x" media="(min-width:768px)" />
+            <source srcset="
+                ./images/hero/ellipse-mobile.png   1x,
+                ./images/hero/ellipse-mobile-2x.png 2x" media="(min-width:0)" />
+            <img src="./images/hero/ellipse-desktop.png" alt="ellipse">
+        </picture>
+
+        <picture class="hero--icecream-pic">
+            <source srcset="
+                ./images/hero/hero-icecream-1x.png 1x,
+                ./images/hero/hero-icecream-2x.png 2x" media="(min-width:1280px)" />
+            <source srcset="
+                ./images/hero/icecream-tablet-1x.png 1x,
+                ./images/hero/icecream-tablet-2x.png 2x" media="(min-width:768px)" />
+            <source srcset="
+                ./images/hero/icecream-mobile-1x.png 1x,
+                ./images/hero/icecream-mobile-2x.png 2x" media="(min-width:0)" />
+            <img src="./images/hero/hero-icecream-1x.png" alt="icecream">
+        </picture>
+
+
+        <div class="hero--top-text">
+            <div>
+                <h1 class="hero--title">ice cream made with <span class="hero--title__big">passion</span></h1>
+
+                <ul class="hero-list list">
+                    <li class="list--item">
+                        <a href="#products" class="link hero--btn hero--btn__dark">Products</a>
+                    </li>
+                    <li class="list--item">
+                        <a href="#about" class="link hero--btn hero--btn__light">How it&#8217s made?</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="amount" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="800">
+                <div class="amount--info">
+                    <h2 class="amount--title">16</h2>
+                    <p class="amount--name">cafes</p>
+                </div>
+                <div class="amount--info">
+                    <h2 class="amount--title">23</h2>
+                    <p class="amount--name">food trucks</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hero--milk" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="800">
+            <picture class="hero--milk-pic">
+                <source srcset="
+                ./images/hero/hero-milk-1x.png 1x,
+                ./images/hero/hero-milk-2x.png 2x" media="(min-width:1280px)" />
+                <source srcset="
+                ./images/hero/milk-tablet-1x.png 1x,
+                ./images/hero/milk-tablet-2x.png 2x" media="(min-width:768px)" />
+                <img src="./images/hero/hero-milk-1x.png" alt="milk">
+            </picture>
+            <div>
+                <p class="hero--milk-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et
+                </p>
+
+                <a href="" class="milk--more">
+                    <img src="./images/hero/arrow-right.svg" alt="arrow" class="icon--tablet">
+                    <img src="./images/hero/arrow-right-desk.svg" alt="arrow" class="icon--desk">
+                </a>
+            </div>
+        </div>
+
+        <picture class="hero--girl-pic">
+            <source srcset="
+                ./images/hero/hero-girl-1x.png 1x,
+                ./images/hero/hero-girl-2x.png 2x" media="(min-width:1280px)" />
+            <source srcset="
+                ./images/hero/girl-tablet-1x.png 1x,
+                ./images/hero/girl-tablet-2x.png 2x" media="(min-width:768px)" />
+            <img src="./images/hero/hero-girl-1x.png" alt="girl">
+        </picture>
     </div>
-</div>
+</section>
