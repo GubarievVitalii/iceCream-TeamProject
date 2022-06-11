@@ -407,7 +407,7 @@ button {
     padding-bottom: 80px;
     background-image: none;
   }
-  .about > .container {
+  .about__info-ligging {
     display: flex;
   }
 }
@@ -424,7 +424,7 @@ button {
     background-image: url(../images/how-its-made/desktop/milk-2x.png);
   }
 }
-.about__heading {
+.about__title {
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
@@ -437,7 +437,7 @@ button {
   color: #FFA5BA;
 }
 @media screen and (min-width: 768px) {
-  .about__heading {
+  .about__title {
     margin-bottom: 16px;
     font-size: 26px;
     line-height: 1.15;
@@ -445,14 +445,14 @@ button {
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__heading {
+  .about__title {
     font-size: 30px;
     line-height: 1.13;
     letter-spacing: 0.04em;
   }
 }
-.about__title {
-  margin: 0 64px 32px 56px;
+.about__heading {
+  margin-bottom: 32px;
   font-family: "Titan One";
   font-style: normal;
   font-weight: 400;
@@ -464,7 +464,7 @@ button {
   color: #D41443;
 }
 @media screen and (min-width: 768px) {
-  .about__title {
+  .about__heading {
     margin: 0;
     margin-bottom: 40px;
     font-size: 48px;
@@ -473,7 +473,7 @@ button {
   }
 }
 @media screen and (min-width: 1280px) {
-  .about__title {
+  .about__heading {
     margin-bottom: 79px;
     font-size: 58px;
     line-height: 1.14;
