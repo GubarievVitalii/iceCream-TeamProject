@@ -177,13 +177,13 @@
     }   
 }
 
-.products__item-ice{
+.products__item-coffee{
     display: block;
-    background: #ffb8ca;
+    background: #F0D1A5;
     position: relative;
     
 }
-.products__item-ice::before {
+.products__item-coffee::before {
     content: '';
     display: block;
     background-position: top;
@@ -197,25 +197,25 @@
     transform: translate(-50%);
     @media screen and (min-width: 320px) and (max-width:767px) {
          top: -150px; 
-        background-image: url('../images/products/mobile/drink-mobile-1x.png'); 
+        background-image: url('../images/products/mobile/drink-mobile-2x-1.png'); 
     }
     @media screen and (min-width: 768px)  {
         top: -150px;
-        background-image: url('../images/products/tablet/pic-tablet-2x.png');
+        background-image: url('../images/products/tablet/pic-tablet-2x-1.png');
     }
     
     @media screen and (min-width: 1280px) {
         top: -250px;
-        background-image: url('../images/products/desktop/pic1-desktop-2x.png');   
+        background-image: url('../images/products/desktop/pic2-desktop-2x.png');   
     }   
 }
-.products__item-ice{
+.products__item-milk{
     display: block;
-    background: #ffb8ca;
+    background: #C2E297;
     position: relative;
     
 }
-.products__item-ice::before {
+.products__item-milk::before {
     content: '';
     display: block;
     background-position: top;
@@ -229,16 +229,16 @@
     transform: translate(-50%);
     @media screen and (min-width: 320px) and (max-width:767px) {
          top: -150px; 
-        background-image: url('../images/products/mobile/drink-mobile-1x.png'); 
+        background-image: url('../images/products/mobile/drink-mobile-2x-2.png'); 
     }
     @media screen and (min-width: 768px)  {
         top: -150px;
-        background-image: url('../images/products/tablet/pic-tablet-2x.png');
+        background-image: url('../images/products/tablet/pic-tablet-2x-2.png');
     }
     
     @media screen and (min-width: 1280px) {
         top: -250px;
-        background-image: url('../images/products/desktop/pic1-desktop-2x.png');   
+        background-image: url('../images/products/desktop/pic3-desktop-2x.png');   
     }   
 }
 
