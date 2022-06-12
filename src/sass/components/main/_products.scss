@@ -13,6 +13,12 @@
         padding-bottom: 60px;
     }
 }
+
+.ancor {
+    text-decoration:none;
+    color: var(--accent-color);
+}
+
 .products-container {
     
     margin-right: auto;
@@ -153,7 +159,7 @@
 
 .products__item-ice{
     display: block;
-    background: var (--section-color-top);
+    background: var(--section-color-top);
     position: relative;
     
 }
