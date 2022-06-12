@@ -392,14 +392,20 @@ button {
 .about {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-image: url(../images/how-its-made/mobile/mobile-milk-1x.png);
-  background-repeat: no-repeat;
-  background-position-y: 577px;
-  background-size: contain;
   background-color: #FFF5F6;
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .about {
+@media screen and (max-width: 767px) {
+  .about > .container {
+    max-width: 320px;
+    margin: 0 auto;
+    background-image: url(../images/how-its-made/mobile/mobile-milk-1x.png);
+    background-repeat: no-repeat;
+    background-position-y: 537px;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .about > .container {
     background-image: url(../images/how-its-made/mobile/mobile-milk-2x.png);
   }
 }
