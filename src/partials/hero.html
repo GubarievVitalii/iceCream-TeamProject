@@ -64,15 +64,22 @@
                 ./images/hero/milk-tablet-2x.png 2x" media="(min-width:768px)" />
                 <img src="./images/hero/hero-milk-1x.png" alt="milk">
             </picture>
-            <div>
-                <p class="hero--milk-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et
+            <div class="milk--info">
+                <p class="milk--txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor
+                    incididunt ut labore lo<span id="dots">...</span><span id="more">rem ipsum dolor sit amet
+                        consectetur adipisicing elit. Exercitationem sed sequi totam eligendi perspiciatis pariatur
+                        quasi voluptates fugit accusantium autem?</span>
                 </p>
 
-                <a href="" class="milk--more">
-                    <img src="./images/hero/arrow-right.svg" alt="arrow" class="icon--tablet">
-                    <img src="./images/hero/arrow-right-desk.svg" alt="arrow" class="icon--desk">
-                </a>
+                <button onclick="myFunction()" class="milk--more__button button">
+                    <svg class="milk--more__icon" id="btnOpen">
+                        <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
+                    </svg>
+                    <svg class="milk--more__icon" id="btnClose">
+                        <use href="./images/symbol-defs.svg#icon-arrow-left"></use>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -86,4 +93,24 @@
             <img src="./images/hero/hero-girl-1x.png" alt="girl">
         </picture>
     </div>
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var more = document.getElementById("more");
+            var btnOpen = document.getElementById("btnOpen");
+            var btnClose = document.getElementById("btnClose");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnClose.style.display = "none";
+                btnOpen.style.display = "inline";
+                more.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnOpen.style.display = "none";
+                btnClose.style.display = "inline";
+                more.style.display = "inline";
+            }
+        }
+    </script>
 </section>
