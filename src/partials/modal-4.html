@@ -1,5 +1,70 @@
-<div class="modal-4">
-  <div class="container">
-    <h2>modal-4</h2>
+<div class="backdrop is-hidden" data-modal-franchise>
+  <div class="modal__franchise">
+    <button class="button__close" type="button" close-franchise>
+      <svg class="client-icon" width="18" height="18">
+        <use href="./images/modal.svg#icon-Vector"></use>
+      </svg>
+    </button>
+    <form>
+      <p class="modal-title-contact">
+        Leave your details, we will call you back
+      </p>
+      <div class="modal-field">
+        <label class="modal-input" for="user-name">Name</label>
+        <div class="modal-input-wrap">
+          <input
+            type="text"
+            class="modal-user-input"
+            name="user-name"
+            id="user-name"
+            required
+          />
+          <svg class="input-icon" width="18" height="18">
+            <use href="./images/modal.svg#icon-person"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label class="modal-input" for="user-tel">Phone</label>
+        <div class="modal-input-wrap">
+          <input
+            type="tel"
+            class="modal-user-input"
+            name="user-tel"
+            id="user-tel"
+            required
+            title="+38----------"
+          />
+          <svg class="input-icon" width="18" height="18">
+            <use href="./images/modal.svg#icon-phone"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label class="modal-input" for="user-email">Mail</label>
+        <div class="modal-input-wrap">
+          <input
+            type="email"
+            class="modal-user-input"
+            name="user-email"
+            id="user-email"
+            required
+          />
+          <svg class="input-icon" width="18" height="18">
+            <use href="./images/modal.svg#icon-email"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field text">
+        <label class="modal-input" for="user-text">Сomment</label>
+        <textarea
+          name="user-text"
+          id="user-text"
+          class="modal-user-coment"
+          placeholder="Введите текст"
+        ></textarea>
+      </div>
+      <button class="button__modal" type="submit">Send</button>
+    </form>
   </div>
 </div>

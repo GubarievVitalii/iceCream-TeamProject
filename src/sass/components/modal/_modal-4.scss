@@ -1,0 +1,203 @@
+.backdrop .is-hidden .modal {
+    transform: scale(0);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1);
+    transition:
+        transform 1500ms cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 1500ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+}
+
+.button__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #FFA5BA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover .client-icon,
+    &:focus .client-icon {
+        fill: #D41443;
+    }
+        &:hover,
+        &:focus {
+            border-color: #D41443;
+        }
+
+}
+
+.modal__franchise {
+    position: absolute;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 500px;
+    border-radius: 24px;
+    background-color: #FFF5F6;
+    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 480px) {
+        padding: 40px 25px 25px 25px;
+        width: 95vw;
+    }
+
+    @media screen and (min-width: 480px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        width: 528px;
+        min-height: 581px;
+    }
+}
+
+.modal-title-contact {
+    font-family: Titan One;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.13;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #D41443;
+    margin-bottom: 12px;
+
+    @media screen and (max-width: 480px) {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+}
+
+.modal-field {
+    margin-bottom: 10px;
+
+    &.text {
+        margin-bottom: 20px;
+    }
+}
+
+.modal-input {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #D41443;
+    margin-bottom: 4px;
+}
+
+.modal-user-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #FFA5BA;
+    color: #D41443;
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color #D41443;
+}
+
+.modal-user-coment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid #FFA5BA;
+    color: #D41443;
+    border-radius: 4px;
+    padding: 12px 16px;
+    resize: none;
+    transition: border-color var(--transition);
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.01em;
+        color: #FFA5BA;
+    }
+}
+
+.modal-input-wrap {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: #FFA5BA;
+    transition: fill var(--transition);
+}
+
+.modal-field:focus-within .input-icon {
+    fill: var(--accent-color);
+}
+
+.modal-field:focus-within .modal-user-input {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.modal-field:focus-within .modal-user-coment {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.check-text {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: #D41443;
+    margin-bottom: 30px;
+}
+
+.client-icon {
+    fill: #FFA5BA;
+    transition: fill var(--transition);
+}
+
+.button__modal {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.37;
+    letter-spacing: 0.06em;
+    border-radius: 22px;
+    border: none;
+    cursor: pointer;    
+    min-width: 150px;
+    min-height: 44px;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFFFF;
+    background-color: #D41443;
+    transition: box-shadow var(--transition);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}
