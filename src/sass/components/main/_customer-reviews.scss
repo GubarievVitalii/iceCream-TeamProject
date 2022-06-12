@@ -1,4 +1,5 @@
 .customer-reviews{
+    background-color: #ffffff00;
     padding-top: 60px;
     padding-bottom: 120px;
 }
@@ -68,22 +69,32 @@
 }
 
 .customer-reviews__header{
-    margin: 53px auto 0 auto;
+    margin: 53px auto 32 auto;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 186%;
     text-align: center; 
     @include tablet {
-        margin: 60px auto 0 auto;
+        margin: 60px auto 32 auto;
         font-size: 16px;}
     @include desktop {
-        margin: 86px auto 0 auto;
-        font-size: 20px;}   
+        margin: 86px auto 20 auto;
+        font-size: 32px;}   
 }
 
-.swiper-pagination{
-    color: #D31342;
-    margin-top:   86px;
+
+
+.slider-card .swiper-pagination{
+    bottom: 0;
+}
+.slider-card .swiper-pagination-bullet{
+    background-color: #ffffff;
+    background-image: url("/src/images/comments/bullet.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 15px;
+    height: 15px;
+    
 }
 

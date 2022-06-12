@@ -3,8 +3,17 @@ var swiper = new Swiper('.slider-card', {
     el: '.swiper-pagination',
     clickable: true,
     dynamicBullets: true,
-    loop: true,
     renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (index + 1) + '</span>';},
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
     },
+  },
+  effect: 'cube',
+  grabCursor: true,
+  cubeEffect: {
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.01,
+    },
+  initialSlide: 1,
 });
