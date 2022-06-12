@@ -1,5 +1,87 @@
 <div class="modal-4">
-    <div class="container">
-        <H2>modal-4</H2>
-    </div>
+  <div class="container">
+    <h2>modal-4</h2>
+  </div>
+</div>
+
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="button__close" type="button" data-modal-close>
+      <svg class="client-icon" width="18" height="18">
+        <!-- <use href="./images/icons.svg#icon-Vector"></use> -->
+      </svg>
+    </button>
+    <form>
+      <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+      <div class="modal-field">
+        <label class="modal-input" for="user-name">Имя</label>
+        <div class="modal-input-wrap">
+          <input
+            type="text"
+            class="modal-user-input"
+            name="user-name"
+            id="user-name"
+            required
+          />
+          <svg class="input-icon" width="18" height="18">
+            <!-- <use href="./images/icons.svg#icon-person"></use> -->
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label class="modal-input" for="user-tel">Телефон</label>
+        <div class="modal-input-wrap">
+          <input
+            type="tel"
+            class="modal-user-input"
+            name="user-tel"
+            id="user-tel"
+            required
+            title="+38----------"
+          />
+          <svg class="input-icon" width="18" height="18">
+            <!-- <use href="./images/icons.svg#icon-phone"></use> -->
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label class="modal-input" for="user-email">Почта</label>
+        <div class="modal-input-wrap">
+          <input
+            type="email"
+            class="modal-user-input"
+            name="user-email"
+            id="user-email"
+            required
+          />
+          <svg class="input-icon" width="18" height="18">
+            <!-- <use href="./images/icons.svg#icon-email"></use> -->
+          </svg>
+        </div>
+      </div>
+      <div class="modal-field text">
+        <label class="modal-input" for="user-text"> Комментарий </label>
+        <textarea
+          name="user-text"
+          id="user-text"
+          class="modal-user-coment"
+          placeholder="Введите текст"
+        ></textarea>
+      </div>
+      <label class="modal-field-accept">
+        <input
+          type="checkbox"
+          class="input-accept-hidden visually-hidden"
+          name="accept"
+          value="accept"
+        />
+        Соглашаюсь с рассылкой и принимаю
+        <a href="" class="check-link">Условия договора</a>
+        <span class="input-accept"></span>
+      </label>
+      <button class="button form__button--position" type="submit">
+        Отправить
+      </button>
+    </form>
+  </div>
 </div>
