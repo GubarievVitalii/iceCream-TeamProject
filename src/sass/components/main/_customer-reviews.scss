@@ -1,0 +1,100 @@
+.customer-reviews{
+    background-color: #ffffff00;
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+
+
+.customer-reviews__img{
+    margin: 0 auto 75px auto;
+    @include tablet {
+    margin: 0 auto 60px auto;} 
+    @include desktop {
+    margin: 0 auto 47px auto;}    
+}
+
+.customer-reviews__par{
+    position: relative;
+    max-width: 180px;
+    margin: 0 auto;
+    padding: 0 10px 0 10px;
+    z-index: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 250%;
+    text-align: center;
+    background-image: repeating-linear-gradient(to bottom, #ffffff00 0px, #ffffff00 29px, #e1e1e1 29px, #e1e1e1 30px);
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -7%;
+        left: 0;
+        width: 54px;
+        height: 40px;
+        background-image: url("/src/images/comments/quotes-1x.png");
+        background-repeat: no-repeat;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 33px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 4px;
+        background-image: url("/src/images/comments/product-3.png");
+        background-repeat: no-repeat;
+        }
+    @include tablet {
+        max-width: 620px;
+        padding: 0 50px 0 50px;
+        font-size: 14px;
+        line-height: 216%;
+        letter-spacing: 0.04em;
+        &:before { top: -15%;}
+        &:after { top: calc(100% + 40px);}
+    }
+    @include desktop {
+        max-width: 820px;
+        padding: 0 35px 0 35px;
+        font-size: 16px;
+        line-height: 186%;
+        background-image: repeating-linear-gradient(to bottom, #ffffff00 0px, #ffffff00 28px, #e1e1e1 28px, #e1e1e1 29px);
+        &:before { top: -25%;}
+        &:after { top: calc(100% + 66px);}
+    }
+}
+
+.customer-reviews__header{
+    margin: 53px auto 32 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 186%;
+    text-align: center; 
+    @include tablet {
+        margin: 60px auto 32 auto;
+        font-size: 16px;}
+    @include desktop {
+        margin: 86px auto 20 auto;
+        font-size: 32px;}   
+}
+
+
+
+.slider-card .swiper-pagination{
+    bottom: 0;
+}
+.slider-card .swiper-pagination-bullet{
+    background-color: #ffffff;
+    background-image: url("/src/images/comments/bullet.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 15px;
+    height: 15px;
+    
+}
+
