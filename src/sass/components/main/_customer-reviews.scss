@@ -21,69 +21,70 @@
     margin: 0 auto 47px auto;}    
 }
 
-.customer-reviews__decor{
-    max-width: 180px;
-    position: relative;
-    &::before {
-        content: "";
-        display: block;
-        width: 54px;
-        height: 40px;
-        background-image: url("/src/images/comments/quotes-1x.png");
-        background-repeat: no-repeat;
-        top: 20px;
-    }
-    &::after {
-        content: "";
-        display: block;
-        width: 32px;
-        height: 4px;
-        background-image: url("/src/images/comments/product-3.png");
-        background-repeat: no-repeat;
-        margin: 32px auto 16px auto;}
-    @include tablet {
-        max-width: 620px;
-        &:after {
-            margin: 40px auto 16px auto;}
-    }
-    @include desktop {
-        max-width: 820px;
-        &:after {
-            margin: 60px auto 16px auto;}
-    }
-    
-}
-
 .customer-reviews__par{
+    position: relative;
+    max-width: 180px;
     padding: 0 10px 0 10px;
+    z-index: 0;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 250%;
     text-align: center;
-    background: repeating-linear-gradient(to bottom, #ffffff 0px, #ffffff 29px, #e1e1e1 29px, #e1e1e1 30px);
+    background-image: repeating-linear-gradient(to bottom, #ffffff00 0px, #ffffff00 29px, #e1e1e1 29px, #e1e1e1 30px);
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -7%;
+        left: 0;
+        width: 54px;
+        height: 40px;
+        background-image: url("/src/images/comments/quotes-1x.png");
+        background-repeat: no-repeat;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 33px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32px;
+        height: 4px;
+        background-image: url("/src/images/comments/product-3.png");
+        background-repeat: no-repeat;
+        }
     @include tablet {
+        max-width: 620px;
         padding: 0 50px 0 50px;
         font-size: 14px;
         line-height: 216%;
         letter-spacing: 0.04em;
-        }
+        &:before { top: -15%;}
+        &:after { top: calc(100% + 40px);}
+    }
     @include desktop {
+        max-width: 820px;
         padding: 0 35px 0 35px;
         font-size: 16px;
         line-height: 186%;
-        background: repeating-linear-gradient(to bottom, #ffffff 0px, #ffffff 28px, #e1e1e1 28px, #e1e1e1 29px);}
+        background-image: repeating-linear-gradient(to bottom, #ffffff00 0px, #ffffff00 28px, #e1e1e1 28px, #e1e1e1 29px);
+        &:before { top: -25%;}
+        &:after { top: calc(100% + 66px);}
+    }
 }
 
 .customer-reviews__header{
-    margin: 0 auto;
+    margin: 53 auto 0 auto;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 186%;
     text-align: center; 
     @include tablet {
+        margin: 60 auto 0 auto;
         font-size: 16px;}
     @include desktop {
+        margin: 86 auto 0 auto;
         font-size: 20px;}   
 }
