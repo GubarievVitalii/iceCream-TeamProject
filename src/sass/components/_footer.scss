@@ -226,12 +226,6 @@
 
         @include tablet {
             width: 768px;
-            margin: 0 auto;
-        }
-
-        @include desktop {
-            width: 100vw;
-            margin: 0 auto;
         }
     }
 }
