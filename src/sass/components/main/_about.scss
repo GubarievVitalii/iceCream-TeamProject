@@ -1,19 +1,26 @@
 .about {
     padding-top: 40px;
     padding-bottom: 40px;
-
-    background-image: url(../images/how-its-made/mobile/mobile-milk-1x.png);
-
-    background-repeat: no-repeat;
-    background-position-y: 577px;
-    background-size: contain;
     background-color: #FFF5F6;
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-        background-image:
-            url(../images/how-its-made/mobile/mobile-milk-2x.png);
+    @media screen and (max-width: 767px) {
+        &>.container {
+            max-width: 320px;
+            margin: 0 auto;
+
+            background-image: url(../images/how-its-made/mobile/mobile-milk-1x.png);
+
+            background-repeat: no-repeat;
+            background-position-y: 537px;
+            background-size: contain;
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image:
+                    url(../images/how-its-made/mobile/mobile-milk-2x.png);
+            }
+        }
     }
 
     @media screen and (min-width: 768px) {
@@ -29,16 +36,19 @@
     @media screen and (min-width: 1280px) {
         padding-top: 60px;
         padding-bottom: 60px;
+        &>.container {
+            background-image: url(../images/how-its-made/desktop/milk-1x.png);
+            background-repeat: no-repeat;
 
-        background-image: url(../images/how-its-made/desktop/milk-1x.png);
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: url(../images/how-its-made/desktop/milk-2x.png);
+            }
 
-        @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-            background-image: url(../images/how-its-made/desktop/milk-2x.png);
-        }
-
-        background-position-y: 275px;
+            background-position-y: 215px;
+            background-position-x: center;
+        } 
     }
 
     &__title {
@@ -255,7 +265,7 @@
 
     &__btn-icon {
         position: absolute;
-        top: 55%;
+        top: 50%;
         right: 38px;
         transform: translateY(-50%);
         
