@@ -1,20 +1,14 @@
-<div class="modal-4">
-  <div class="container">
-    <h2>modal-4</h2>
-  </div>
-</div>
-
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <button class="button__close" type="button" data-modal-close>
+<div class="backdrop is-hidden" data-modal-franchise>
+  <div class="modal__franchise">
+    <button class="button__close" type="button" close-franchise>
       <svg class="client-icon" width="18" height="18">
-        <!-- <use href="./images/icons.svg#icon-Vector"></use> -->
+        <use href="./images/modal.svg#icon-Vector"></use>
       </svg>
     </button>
     <form>
-      <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+      <p class="modal-title">Leave your details, we will call you back</p>
       <div class="modal-field">
-        <label class="modal-input" for="user-name">Имя</label>
+        <label class="modal-input" for="user-name">Name</label>
         <div class="modal-input-wrap">
           <input
             type="text"
@@ -24,12 +18,12 @@
             required
           />
           <svg class="input-icon" width="18" height="18">
-            <!-- <use href="./images/icons.svg#icon-person"></use> -->
+            <use href="./images/modal.svg#icon-person"></use>
           </svg>
         </div>
       </div>
       <div class="modal-field">
-        <label class="modal-input" for="user-tel">Телефон</label>
+        <label class="modal-input" for="user-tel">Phone</label>
         <div class="modal-input-wrap">
           <input
             type="tel"
@@ -40,12 +34,12 @@
             title="+38----------"
           />
           <svg class="input-icon" width="18" height="18">
-            <!-- <use href="./images/icons.svg#icon-phone"></use> -->
+            <use href="./images/modal.svg#icon-phone"></use>
           </svg>
         </div>
       </div>
       <div class="modal-field">
-        <label class="modal-input" for="user-email">Почта</label>
+        <label class="modal-input" for="user-email">Mail</label>
         <div class="modal-input-wrap">
           <input
             type="email"
@@ -55,12 +49,12 @@
             required
           />
           <svg class="input-icon" width="18" height="18">
-            <!-- <use href="./images/icons.svg#icon-email"></use> -->
+            <use href="./images/modal.svg#icon-email"></use>
           </svg>
         </div>
       </div>
       <div class="modal-field text">
-        <label class="modal-input" for="user-text"> Комментарий </label>
+        <label class="modal-input" for="user-text">Сomment</label>
         <textarea
           name="user-text"
           id="user-text"
@@ -68,20 +62,7 @@
           placeholder="Введите текст"
         ></textarea>
       </div>
-      <label class="modal-field-accept">
-        <input
-          type="checkbox"
-          class="input-accept-hidden visually-hidden"
-          name="accept"
-          value="accept"
-        />
-        Соглашаюсь с рассылкой и принимаю
-        <a href="" class="check-link">Условия договора</a>
-        <span class="input-accept"></span>
-      </label>
-      <button class="button form__button--position" type="submit">
-        Отправить
-      </button>
+      <button class="button__modal" type="submit">Send</button>
     </form>
   </div>
 </div>
