@@ -220,7 +220,7 @@
 
   margin-right: 8px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--main-transition);
 
   &:hover,
   &:focus {
@@ -232,7 +232,7 @@
   background-color: var(--light-color);
   color: var(--accent-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--main-transition);
 
   &:hover,
   &:focus {
@@ -295,11 +295,16 @@
   border-radius: 50%;
   background-color: var(--light-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--main-transition);
 
   @include desktop {
     width: 26px;
     height: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
   }
 }
 
@@ -307,10 +312,16 @@
   width: 6px;
   height: 6px;
   fill: var(--accent-color);
+  transition: fill var(--main-transition);
 
   @include desktop {
     width: 10px;
     height: 10px;
+  }
+
+  .milk--more__button:hover &,
+  .milk--more__button:focus & {
+    fill: var(--light-color);
   }
 }
 
