@@ -1,7 +1,13 @@
 .customer-reviews{
-    background-color: #ffffff00;
+    padding-top: 40px;
+    padding-bottom: 24px;
+    @include tablet {
+    padding-bottom: 60px;
+    }
+    @include desktop {
     padding-top: 60px;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
+    }
 }
 
 
@@ -25,6 +31,7 @@
     font-size: 12px;
     line-height: 250%;
     text-align: center;
+    background-color: #fafafa;
     background-image: repeating-linear-gradient(to bottom, #ffffff00 0px, #ffffff00 29px, #e1e1e1 29px, #e1e1e1 30px);
     &:before {
         content: "";
