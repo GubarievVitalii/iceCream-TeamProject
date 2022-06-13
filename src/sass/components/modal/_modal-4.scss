@@ -71,7 +71,7 @@
 
     &:hover .modal-contacts__icon,
     &:focus .modal-contacts__icon {
-        fill: #FFA5BA;
+        fill: #D41443;
     }
 }
 
@@ -174,7 +174,7 @@
 }
 
 .modal-contacts__icon {
-    fill: #D41443;
+    fill: #FFA5BA;
     transition: fill var(--main-transition);
 }
 
