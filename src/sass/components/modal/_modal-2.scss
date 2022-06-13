@@ -7,10 +7,11 @@
     left: 0;
     overflow: auto;
 
-    background: rgba(0, 0, 0, 0.2);
+    background-color: rgba(225, 121, 146, .2);
+
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     z-index: 2;
 }
@@ -22,7 +23,8 @@
 }
 
 .about-backdrop.is-hidden .modal-about {
-    transform: translate(-50%, -50%) scale(0.9);
+    transform: scale(0.8) translate(-50%, -50%);
+    transform-origin: center;
 }
 
 .modal-about {
@@ -30,6 +32,9 @@
     top: 50%;
     left: 50%;
     overflow: auto;
+    border-radius: 24px;
+
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     display: flex;
     flex-wrap: wrap;
@@ -37,14 +42,8 @@
     padding: 40px;
 
     min-width: 100%;
-    min-height: 609px;
 
-    @media screen and (min-width: 455px) {
-        min-width: 450px;
-        min-height: 609px;
-    }
-
-    background-color: #E17992;
+    background-color: #fff5f6;
     background-image: url(../images/how-its-made/mobile/mobile-milk-1x.png);
     background-repeat: no-repeat;
     background-size: contain;
@@ -52,19 +51,19 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 22px;
 
-    transform: translate(-50%, -50%) scale(1);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%) scale(0.9);
+
+    @media screen and (min-width: 455px) {
+        min-width: 450px;
+    }
 
     @media screen and (min-width: 768px) {
         max-width: 450px;
-        max-height: 100%;
     }
 
     @media screen and (min-width: 1280px) {
         min-width: 528px;
-        min-height: 581px;
     }
 
     &__text {
@@ -78,24 +77,15 @@
         text-indent: 20px;
         text-align: justify;
 
-        color: #000000;
+        color: rgba(0, 0, 0, 0.5);
     }
-
-    &__btn-close {
-        display: block;
-        width: 176px;
-        height: 44px;
-        padding: 0;
-        margin: 0 auto;
-        margin-top: auto;
-
-        background: #FFFFFF;
-        border-radius: 22px;
-        border: none;
-
-        &:hover,
-        &:focus {
-            background-color: #ECEBEB;
+    &__icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        fill: #FFA5BA;
+        &:hover, &:focus {
+            fill: #D41443;
         }
     }
 }
