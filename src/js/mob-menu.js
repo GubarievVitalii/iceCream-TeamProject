@@ -3,18 +3,28 @@
     
     const mobileMenuRef = document.querySelector("[data-menu]");
     const btn = document.querySelector('[data-mob-menu-close]');
-  
+    const back = document.querySelector("[data-mob-back]");
+
+    
     btn.addEventListener('click', function onClick(event) {
         mobileMenuRef.classList.remove('is-open');
     });
   
     menuBtnRef.addEventListener("click", () =>  {
-      const expanded =
-        menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+      
   
       menuBtnRef.classList.toggle("is-open");
-      menuBtnRef.setAttribute("aria-expanded", !expanded);
-  
+       
       mobileMenuRef.classList.add("is-open");
+    });
+    menuBtnRef.addEventListener('click', function onClick(event)  {
+    
+      back.classList.toggle("is-hidden");
+     
+    });
+    btn.addEventListener('click', function onClick(event)  {
+    
+      back.classList.toggle("is-hidden");
+     
     });
   })();

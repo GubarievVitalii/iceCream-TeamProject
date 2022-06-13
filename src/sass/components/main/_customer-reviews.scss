@@ -9,7 +9,10 @@
     padding-bottom: 80px;
     }
 }
-
+.customer-reviews .container {
+    position: relative;
+    z-index: 0;
+}
 
 
 .customer-reviews__img{
