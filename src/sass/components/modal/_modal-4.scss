@@ -1,24 +1,20 @@
-.contacts__backdrop .is-hidden .modal {
-    transform: scale(0);
+.contacts__backdrop.is-hidden .modal__franchise {
+    transform: scale(0.8) translate(-50%, -50%);
+    transform-origin: center;
 }
 
 .contacts__backdrop {
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: scale(1);
+    background-color: rgba(225, 121, 146, 0.2);
+    overflow-y: scroll;
     transition:
-        transform 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-        opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        z-index: 100;
+        opacity 500ms ease,
+        visibility 500ms ease;        
 
     &.is-hidden {
         opacity: 0;
@@ -27,40 +23,22 @@
     }
 }
 
-.modal-franchise__close {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid #FFA5BA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover .modal-contacts__icon,
-    &:focus .modal-contacts__icon {
-        fill: #D41443;
-    }
-        &:hover,
-        &:focus {
-            border-color: #D41443;
-        }
-}
-
 .modal__franchise {
     position: absolute;
     padding: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    top: 50%;
+    left: 50%;
     min-height: 500px;
-    border-radius: 24px;
     background-color: #FFF5F6;
-    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 24px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%)  scale(1);
+    transition: 
+        transform 500ms ease,
+        opacity 500ms ease,
+        visibility 500ms ease;
+    transform-origin: center;
+    z-index: 10;
 
     @media screen and (max-width: 480px) {
         padding: 40px 25px 25px 25px;
@@ -74,6 +52,26 @@
     @media screen and (min-width: 1280px) {
         width: 528px;
         min-height: 581px;
+    }
+}
+
+.modal-franchise__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: fill var(--main-transition);
+
+    &:hover .modal-contacts__icon,
+    &:focus .modal-contacts__icon {
+        fill: #FFA5BA;
     }
 }
 
@@ -129,7 +127,7 @@
     border-radius: 4px;
     padding: 12px 16px;
     resize: none;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--main-transition);
 
     &::placeholder {
         font-size: 12px;
@@ -149,7 +147,7 @@
     left: 12px;
     transform: translateY(-50%);
     fill: #FFA5BA;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--main-transition);
 }
 
 .modal-field:focus-within .input-icon {
@@ -176,8 +174,8 @@
 }
 
 .modal-contacts__icon {
-    fill: #FFA5BA;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #D41443;
+    transition: fill var(--main-transition);
 }
 
 .button__modal {
@@ -196,10 +194,10 @@
     margin-right: auto;
     color: #FFFFFF;
     background-color: #D41443;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow var(--main-transition);
 
     &:hover,
     &:focus {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 4px 4px rgba(212, 20, 67, 0.1);
     }
 }

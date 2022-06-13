@@ -263,6 +263,9 @@
     color: #FFFFFF;
     width: 162px;
     height: 44px;
+    transition: 
+        background-color var(--main-transition)
+        box-shadow var(--main-transition);
 
     @media screen and (max-width: 767px) {
         margin-bottom: 10px;
@@ -281,6 +284,7 @@
 .contacts__button-locations--style:hover,
 .contacts__button-locations--style:focus {
     background-color: #D41342;
+    box-shadow: 0px 4px 4px rgba(212, 20, 67, 0.1);
 }
 
 .contacts__button-franchise--style {    
@@ -288,6 +292,9 @@
     color: #D41443;
     width: 162px;
     height: 44px;
+    transition: 
+        background-color var(--main-transition)
+        box-shadow var(--main-transition);
     
     @media screen and (min-width: 768px) {
         width: 175px;
@@ -301,6 +308,7 @@
 .contacts__button-franchise--style:hover,
 .contacts__button-franchise--style:focus {
     background-color: #ECEBEB;
+    box-shadow: 0px 4px 4px rgba(212, 20, 67, 0.1);
 }
 
 .button-arrow {
