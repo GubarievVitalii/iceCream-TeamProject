@@ -1,14 +1,26 @@
+.contacts__backdrop.is-hidden .modal__locations {
+    transform: scale(0.8) translate(-50%, -50%);
+    transform-origin: center;
+}
+
 .modal__locations {
     position: absolute;
     padding: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    top: 50%;
+    left: 50%;
     min-height: 500px;
-    border-radius: 24px;
     background-color: #FFF5F6;
-    transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 24px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%) scale(1);
+    transition:
+        transform 500ms ease,
+        opacity 500ms ease,
+        visibility 500ms ease;
+    transform-origin: center;
+    z-index: 10;
 
-    @media screen and (max-width: 480px) {
+        @media screen and (max-width: 480px) {
         padding: 40px 25px 25px 25px;
         width: 95vw;
     }
@@ -29,26 +41,19 @@
     right: 15px;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
     background-color: transparent;
-    border: 2px solid #FFA5BA;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--main-transition);
 
     &:hover .modal-contacts__icon,
     &:focus .modal-contacts__icon {
-        fill: #D41443;
-    }
-
-    &:hover,
-    &:focus {
-        border-color: #D41443;
+        fill: #FFA5BA;
     }
 }
-
 
 .adaptivny-slayder {
     position: relative;
