@@ -27,20 +27,8 @@
         padding-top: 20px;
         padding-bottom: 80px;
         &>.container {
-            background-image: url(../images/how-its-made/desktop/milk-1x.png);
-            background-repeat: no-repeat;
-
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-                background-image: url(../images/how-its-made/desktop/milk-2x.png);
-            }
-            
-            background-position-y: 115px;
-            background-position-x: center;
-            background-size: contain;
-        } 
-        
+            background-image: none;
+        }
         &__info-ligging {
             display: flex;
         }

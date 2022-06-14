@@ -47,6 +47,11 @@
     background-image: url(../images/how-its-made/mobile/mobile-milk-1x.png);
     background-repeat: no-repeat;
     background-size: contain;
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/how-its-made/mobile/mobile-milk-2x.png);
+    }
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),

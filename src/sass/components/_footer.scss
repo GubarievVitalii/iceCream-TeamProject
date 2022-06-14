@@ -122,7 +122,6 @@
         height: 32px;
         border-radius: 50%;
         background-color: #FFA5BA;
-        margin-left: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,7 +131,7 @@
     }
 
     &__item:not(:last-child) {
-        margin-left: 28px;
+        margin-right: 28px;
     }
 
     &__item:hover,
