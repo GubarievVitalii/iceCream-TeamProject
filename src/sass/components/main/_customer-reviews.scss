@@ -98,13 +98,20 @@
 .slider-card .swiper-pagination{
     bottom: 0;
 }
+
 .slider-card .swiper-pagination-bullet{
+    position: static;
+    background-color: #a5a4a4;
+    width: 12px;
+    height: 12px;
+    
+}
+.slider-card .swiper-pagination-bullet-active{
     background-color: #ffffff;
     background-image: url("/src/images/comments/bullet.png");
     background-repeat: no-repeat;
     background-position: center center;
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     
 }
-
