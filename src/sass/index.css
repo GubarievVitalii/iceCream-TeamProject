@@ -1,4 +1,8 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "DM Sans", sans-serif, "Titan One", cursive;
   font-style: normal;
@@ -142,6 +146,41 @@ button {
   margin-right: 35px;
 }
 
+.top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 5;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  fill: rgba(210, 20, 68, 0.5019607843);
+}
+.top-btn:hover {
+  fill: #d21444;
+}
+
+.top__svg {
+  width: 30px;
+  height: 30px;
+}
+@media screen and (min-width: 768px) {
+  .top__svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .top__svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .vector-icon {
   margin-left: 14px;
 }
@@ -198,9 +237,8 @@ button {
   border: none;
   background-color: transparent;
   position: relative;
-  height: 18px;
-  width: 18px;
-  transition: background-color 250ms ease;
+  height: 20px;
+  width: 20px;
 }
 .mob-menu__close:hover span::before, .mob-menu__close:focus span::before, .mob-menu__close:hover span::after, .mob-menu__close:focus span::after {
   background-color: var(--accent-color);
@@ -208,22 +246,24 @@ button {
 .mob-menu__close span::before {
   content: "";
   position: absolute;
-  top: 9px;
+  top: 10px;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: var(--light-color);
   transform: rotate(45deg);
+  transition: background-color var(--main-transition);
 }
 .mob-menu__close span::after {
   content: "";
   position: absolute;
-  top: 9px;
+  top: 10px;
   left: 0;
   width: 100%;
   height: 1px;
   background-color: var(--light-color);
   transform: rotate(-45deg);
+  transition: background-color var(--main-transition);
 }
 
 .mob-menu {
@@ -253,7 +293,7 @@ button {
   line-height: 1.3;
   text-align: center;
   color: var(--accent-color);
-  transition: background-color 250ms ease;
+  transition: background-color var(--main-transition);
 }
 .buy__btn:hover, .buy__btn:focus {
   background-color: var(--hover-btn-light);
@@ -290,7 +330,7 @@ button {
   font-size: 14px;
   line-height: 1.3;
   color: var(--light-color);
-  transition: color 250ms ease;
+  transition: color var(--main-transition);
 }
 .mob-nav__link:hover, .mob-nav__link:focus {
   color: var(--accent-color);
@@ -659,11 +699,6 @@ button {
   }
 }
 
-.ancor {
-  text-decoration: none;
-  color: var(--accent-color);
-}
-
 .products-container {
   margin-right: auto;
   margin-left: auto;
@@ -739,21 +774,21 @@ button {
   .products-title-head {
     font-size: 34px;
     line-height: 1.14;
-    margin-bottom: 8px;
+    margin-bottom: 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .products-title-head {
     font-size: 48px;
     line-height: 1.14;
-    margin-bottom: 16px;
+    margin-bottom: 150px;
   }
 }
 @media screen and (min-width: 1280px) {
   .products-title-head {
     font-size: 58px;
     line-height: 1.13;
-    margin-bottom: 0;
+    margin-bottom: 250px;
   }
 }
 
@@ -785,17 +820,17 @@ button {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item {
     width: 280px;
-    height: 489px;
-    margin-top: 150px;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto 160px auto;
+    padding: 160px 40px 40px 40px;
+  }
+  .products__item:last-child {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .products__item {
     width: 224px;
-    height: 473px;
-    margin-top: 150px;
+    padding: 118px 32px 40px 32px;
     flex-basis: calc((100% - 48px) / 3);
   }
   .products__item:not(:last-child) {
@@ -805,9 +840,8 @@ button {
 }
 @media screen and (min-width: 1280px) {
   .products__item {
-    margin-top: 250px;
     width: 395px;
-    height: 535px;
+    padding: 165px 77px 60px 77px;
     flex-basis: calc((100% - 96px) / 3);
   }
   .products__item:not(:last-child) {
@@ -841,22 +875,37 @@ button {
     background-image: url("../images/products/mobile/drink-mobile-1x.png");
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 2dppx) {
+  .products__item-ice::before {
+    background-image: url("../images/products/mobile/drink-mobile-2x.png");
+  }
+}
 @media screen and (min-width: 768px) {
   .products__item-ice::before {
     top: -150px;
+    background-image: url("../images/products/tablet/pic-tablet-1x.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__item-ice::before {
     background-image: url("../images/products/tablet/pic-tablet-2x.png");
   }
 }
 @media screen and (min-width: 1280px) {
   .products__item-ice::before {
     top: -250px;
+    background-image: url("../images/products/desktop/pic1-desktop-1x.png");
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .products__item-ice::before {
     background-image: url("../images/products/desktop/pic1-desktop-2x.png");
   }
 }
 
 .products__item-coffee {
   display: block;
-  background: #F0D1A5;
+  background: #f0d1a5;
   position: relative;
 }
 
@@ -876,25 +925,40 @@ button {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item-coffee::before {
     top: -150px;
+    background-image: url("../images/products/mobile/drink-mobile-1x-1.png");
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 2dppx) {
+  .products__item-coffee::before {
     background-image: url("../images/products/mobile/drink-mobile-2x-1.png");
   }
 }
 @media screen and (min-width: 768px) {
   .products__item-coffee::before {
     top: -150px;
+    background-image: url("../images/products/tablet/pic-tablet-1x-1.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__item-coffee::before {
     background-image: url("../images/products/tablet/pic-tablet-2x-1.png");
   }
 }
 @media screen and (min-width: 1280px) {
   .products__item-coffee::before {
     top: -250px;
+    background-image: url("../images/products/desktop/pic2-desktop-1x.png");
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .products__item-coffee::before {
     background-image: url("../images/products/desktop/pic2-desktop-2x.png");
   }
 }
 
 .products__item-milk {
   display: block;
-  background: #C2E297;
+  background: #c2e297;
   position: relative;
 }
 
@@ -914,18 +978,33 @@ button {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products__item-milk::before {
     top: -150px;
+    background-image: url("../images/products/mobile/drink-mobile-1x-2.png");
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (min-width: 320px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 192dpi), screen and (min-width: 320px) and (max-width: 767px) and (min-resolution: 2dppx) {
+  .products__item-milk::before {
     background-image: url("../images/products/mobile/drink-mobile-2x-2.png");
   }
 }
 @media screen and (min-width: 768px) {
   .products__item-milk::before {
     top: -150px;
+    background-image: url("../images/products/tablet/pic-tablet-1x-2.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__item-milk::before {
     background-image: url("../images/products/tablet/pic-tablet-2x-2.png");
   }
 }
 @media screen and (min-width: 1280px) {
   .products__item-milk::before {
     top: -250px;
+    background-image: url("../images/products/desktop/pic3-desktop-1x.png");
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .products__item-milk::before {
     background-image: url("../images/products/desktop/pic3-desktop-2x.png");
   }
 }
@@ -938,26 +1017,24 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--light-color);
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .products-item-title {
     font-size: 20px;
     line-height: 1.15;
-    padding-top: 160px;
   }
 }
 @media screen and (min-width: 768px) {
   .products-item-title {
     font-size: 20px;
     line-height: 1.15;
-    padding-top: 118px;
   }
 }
 @media screen and (min-width: 1280px) {
   .products-item-title {
     font-size: 30px;
     line-height: 1;
-    padding-top: 165px;
   }
 }
 
@@ -998,7 +1075,7 @@ button {
 .products-dots-item {
   position: relative;
   content: "";
-  fill: #FFFFFF;
+  fill: #ffffff;
   position: relative;
   display: flex;
   justify-content: center;
@@ -1007,7 +1084,6 @@ button {
 
 .products-dots-list {
   display: block;
-  margin-top: 32px;
   margin-bottom: 32px;
 }
 
@@ -1022,15 +1098,24 @@ button {
   border: 0.5px;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
-  margin-bottom: 40px;
+  margin: 0 auto;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .products-btn-more:hover, .products-btn-more:focus {
   background-color: var(--hover-btn-dark);
   fill: var(--light-color);
+}
+
+#amore,
+#bmore,
+#cmore {
+  display: none;
+}
+
+#abtnClose,
+#bbtnClose,
+#cbtnClose {
+  display: none;
 }
 
 .about {
@@ -1059,19 +1144,8 @@ button {
     padding-bottom: 80px;
   }
   .about > .container {
-    background-image: url(../images/how-its-made/desktop/milk-1x.png);
-    background-repeat: no-repeat;
-    background-position-y: 115px;
-    background-position-x: center;
-    background-size: contain;
+    background-image: none;
   }
-}
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .about > .container {
-    background-image: url(../images/how-its-made/desktop/milk-2x.png);
-  }
-}
-@media screen and (min-width: 768px) {
   .about__info-ligging {
     display: flex;
   }
@@ -1541,14 +1615,19 @@ button {
 }
 @media screen and (min-width: 768px) {
   .customer-reviews {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (min-width: 1280px) {
   .customer-reviews {
     padding-top: 60px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
+}
+
+.customer-reviews .container {
+  position: relative;
+  z-index: 0;
 }
 
 .customer-reviews__img {
@@ -1674,20 +1753,20 @@ button {
 }
 
 .contacts {
-  background: linear-gradient(to bottom, #FFFFFF 23%, #FFF5F6 23%);
+  background: linear-gradient(to bottom, var(--light-color) 23%, var(--section-color-botom) 23%);
   padding-top: 24px;
   padding-bottom: 24px;
 }
 @media screen and (min-width: 768px) {
   .contacts {
-    background: linear-gradient(to bottom, #FFFFFF 24%, #FFF5F6 24%);
+    background: linear-gradient(to bottom, var(--light-color) 24%, var(--section-color-botom) 24%);
     padding-top: 40px;
     padding-bottom: 20px;
   }
 }
 @media screen and (min-width: 1280px) {
   .contacts {
-    background: linear-gradient(to bottom, #FFFFFF 21%, #FFF5F6 21%);
+    background: linear-gradient(to bottom, var(--light-color) 21%, var(--section-color-botom) 21%);
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -1711,7 +1790,7 @@ button {
 
 .contacts__item {
   width: 280px;
-  background: #FFFFFF;
+  background: var(--light-color);
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   padding: 40px 32px;
@@ -1733,7 +1812,6 @@ button {
     padding: 40px;
   }
 }
-
 @media screen and (max-width: 767px) {
   .contacts__item:not(:last-child) {
     margin-bottom: 20px;
@@ -1750,7 +1828,7 @@ button {
   font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.04em;
-  color: #FFFFFF;
+  color: var(--light-color);
   border-radius: 4px;
   text-align: center;
   margin-bottom: 20px;
@@ -1789,7 +1867,7 @@ button {
   font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.04em;
-  color: #000000;
+  color: var(--text-color-dark-first);
   margin-bottom: 8px;
 }
 @media screen and (min-width: 768px) {
@@ -1810,7 +1888,7 @@ button {
   line-height: 1.5;
   line-height: 1.83;
   letter-spacing: 0.04em;
-  color: #907E82;
+  color: var(--text-color-dark-second);
 }
 @media screen and (min-width: 768px) {
   .contacts__description {
@@ -1824,7 +1902,6 @@ button {
     font-size: 16px;
   }
 }
-
 .contacts__description::after {
   content: "";
   display: block;
@@ -1846,7 +1923,7 @@ button {
   font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.04em;
-  color: #000000;
+  color: var(--text-color-dark-first);
 }
 @media screen and (min-width: 768px) {
   .contacts__working-days {
@@ -1911,7 +1988,7 @@ button {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.5;
-  color: #907E82;
+  color: var(--text-color-dark-second);
 }
 @media screen and (min-width: 768px) {
   .cotacts__tell-mail {
@@ -1952,10 +2029,11 @@ button {
 }
 
 .contacts__button-locations--style {
-  background-color: #D41443;
-  color: #FFFFFF;
+  background-color: var(--accent-color);
+  color: var(--light-color);
   width: 162px;
   height: 44px;
+  transition: background-color var(--main-transition) box-shadow var(--main-transition);
 }
 @media screen and (max-width: 767px) {
   .contacts__button-locations--style {
@@ -1973,17 +2051,17 @@ button {
     width: 198px;
   }
 }
-
-.contacts__button-locations--style:hover,
-.contacts__button-locations--style:focus {
-  background-color: #D41342;
+.contacts__button-locations--style:hover, .contacts__button-locations--style:focus {
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(212, 20, 67, 0.1);
 }
 
 .contacts__button-franchise--style {
-  background-color: #FFFFFF;
-  color: #D41443;
+  background-color: var(--light-color);
+  color: var(--accent-color);
   width: 162px;
   height: 44px;
+  transition: background-color var(--main-transition) box-shadow var(--main-transition);
 }
 @media screen and (min-width: 768px) {
   .contacts__button-franchise--style {
@@ -1995,10 +2073,9 @@ button {
     width: 180px;
   }
 }
-
-.contacts__button-franchise--style:hover,
-.contacts__button-franchise--style:focus {
-  background-color: #ECEBEB;
+.contacts__button-franchise--style:hover, .contacts__button-franchise--style:focus {
+  background-color: var(--hover-btn-light);
+  box-shadow: 0px 4px 4px rgba(212, 20, 67, 0.1);
 }
 
 .button-arrow {
@@ -2079,7 +2156,7 @@ button {
     font-size: 18px;
     line-height: 1.1666666667;
     width: 232px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2106,13 +2183,14 @@ button {
     line-height: 39px;
     letter-spacing: 0.04em;
     width: 200px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 @media screen and (min-width: 768px) {
   .footer-text__two {
     font-size: 48px;
     line-height: 1.1458333333;
+    width: 340px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -2121,7 +2199,7 @@ button {
     line-height: 1.1379310345;
     width: 474px;
     text-align: center;
-    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
 }
 
@@ -2130,7 +2208,7 @@ button {
   list-style: none;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 .footer-soc-list__item {
   cursor: pointer;
@@ -2138,7 +2216,6 @@ button {
   height: 32px;
   border-radius: 50%;
   background-color: #FFA5BA;
-  margin-left: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2147,7 +2224,7 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-list__item:not(:last-child) {
-  margin-left: 28px;
+  margin-right: 28px;
 }
 .footer-soc-list__item:hover, .footer-soc-list__item:focus {
   background-color: #D41443;
@@ -2166,7 +2243,7 @@ button {
 @media screen and (min-width: 320px) {
   .footer-address {
     display: block;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 }
 .footer-address__text {
@@ -2233,7 +2310,6 @@ button {
   font-size: 14px;
   text-align: center;
   color: #907E82;
-  padding-right: 3px;
   letter-spacing: 0.02em;
 }
 @media screen and (min-width: 320px) {
@@ -2255,8 +2331,7 @@ button {
 }
 
 .backdrop.is-hidden .modal-buy {
-  transform: scale(0.8) translate(-50%, -50%);
-  transform-origin: center;
+  transform: scale(0.5) translate(-50%, -50%);
 }
 
 .backdrop {
@@ -2267,7 +2342,7 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(225, 121, 146, 0.2);
-  transition: opacity 250ms ease, visibility 250ms ease;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow-y: scroll;
 }
 
@@ -2278,21 +2353,26 @@ button {
   left: 50%;
   z-index: 10;
   max-height: 600px;
-  background-color: var(--section-color-top);
+  background-color: var(--section-color-botom);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 24px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms ease, opacity 250ms ease, visibility 250ms ease;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), opacity 500ms cubic-bezier(0.4, 0, 0.2, 1), visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: center;
 }
 @media screen and (min-width: 320px) {
   .modal-buy {
-    width: calc(100% - 20px);
+    width: calc(100% - 30px);
   }
 }
 @media screen and (min-width: 530px) {
   .modal-buy {
     width: 500px;
+  }
+}
+@media screen and (max-height: 600px) {
+  .modal-buy {
+    top: 260px;
   }
 }
 
@@ -2303,32 +2383,33 @@ button {
   border: none;
   background-color: transparent;
   position: relative;
-  height: 18px;
-  width: 18px;
-  transition: background-color 250ms ease;
+  height: 22px;
+  width: 22px;
 }
 .modal-buy__close:hover span::before, .modal-buy__close:focus span::before, .modal-buy__close:hover span::after, .modal-buy__close:focus span::after {
-  background-color: var(--accent-color);
+  background-color: var(--hover-btn-dark);
 }
 .modal-buy__close span::before {
   content: "";
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: 0;
   width: 100%;
-  height: 1px;
-  background-color: var(--light-color);
+  height: 1.5px;
+  background-color: var(--section-color-mobmenu);
   transform: rotate(45deg);
+  transition: background-color var(--main-transition);
 }
 .modal-buy__close span::after {
   content: "";
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: 0;
   width: 100%;
-  height: 1px;
-  background-color: var(--light-color);
+  height: 1.5px;
+  background-color: var(--section-color-mobmenu);
   transform: rotate(-45deg);
+  transition: background-color var(--main-transition);
 }
 
 .modal-buy__title {
@@ -2336,7 +2417,7 @@ button {
   font-size: 24px;
   line-height: 1.3;
   text-align: center;
-  color: var(--light-color);
+  color: var(--accent-color);
 }
 
 .modal-buy__label {
@@ -2346,7 +2427,7 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
-  color: var(--light-color);
+  color: var(--section-color-mobmenu);
   transition: color 250ms ease;
 }
 
@@ -2365,8 +2446,8 @@ button {
   font-size: 14px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: var(--section-color-top);
-  transition: border-color 250ms ease, opacity 250ms ease, visibility 250ms ease;
+  color: var(--accent-color);
+  transition: border-color var(--main-transition), opacity var(--main-transition), visibility var(--main-transition);
   outline: none;
 }
 .modal-buy__input:hover, .modal-buy__input:focus {
@@ -2378,7 +2459,7 @@ button {
   margin: 0 auto;
   width: 200px;
   height: 50px;
-  background-color: var(--light-color);
+  background-color: var(--accent-color);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
   border-color: transparent;
@@ -2386,13 +2467,13 @@ button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  color: var(--accent-color);
+  color: var(--light-color);
   cursor: pointer;
-  transition: background-color 250ms ease;
+  transition: background-color var(--main-transition);
   outline: none;
 }
 .modal-buy__submit:hover, .modal-buy__submit:focus {
-  background-color: var(--hover-btn-light);
+  background-color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
@@ -2418,11 +2499,19 @@ button {
   }
 }
 .modal-buy__select option {
-  color: var(--section-color-top);
+  color: var(--section-color-mobmenu);
 }
 .modal-buy__select select {
   color: var(--accent-color);
-  border: none;
+  border-color: var(--section-color-mobmenu);
+  border-radius: 4px;
+  outline: none;
+}
+.modal-buy__select select:hover, .modal-buy__select select:focus {
+  border-color: var(--accent-color);
+}
+.modal-buy__select select:last-child {
+  min-width: 30px;
 }
 .modal-buy__select select + select {
   min-width: 30px;
@@ -2476,6 +2565,11 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%) scale(0.9);
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .modal-about {
+    background-image: url(../images/how-its-made/mobile/mobile-milk-2x.png);
+  }
+}
 @media screen and (min-width: 455px) {
   .modal-about {
     min-width: 450px;
@@ -2507,59 +2601,10 @@ button {
   top: 15px;
   right: 15px;
   fill: #FFA5BA;
+  cursor: pointer;
 }
 .modal-about__icon:hover, .modal-about__icon:focus {
   fill: #D41443;
-}
-
-.modal__locations {
-  position: absolute;
-  padding: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 500px;
-  border-radius: 24px;
-  background-color: #FFF5F6;
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (max-width: 480px) {
-  .modal__locations {
-    padding: 40px 25px 25px 25px;
-    width: 95vw;
-  }
-}
-@media screen and (min-width: 480px) {
-  .modal__locations {
-    width: 450px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .modal__locations {
-    width: 528px;
-    min-height: 581px;
-  }
-}
-
-.modal-locations__close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 2px solid #FFA5BA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-locations__close:hover .modal-contacts__icon, .modal-locations__close:focus .modal-contacts__icon {
-  fill: #D41443;
-}
-.modal-locations__close:hover, .modal-locations__close:focus {
-  border-color: #D41443;
 }
 
 .adaptivny-slayder {
@@ -2589,20 +2634,20 @@ button {
   margin: 0 3px;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  border: 1px solid #D41443;
+  border: 1px solid var(--accent-color);
   background-color: #FFA5BA;
 }
 
 #slaid1:checked ~ .kadoves label[for=slaid1] {
-  background-color: #D41443;
+  background-color: var(--accent-color);
 }
 
 #slaid2:checked ~ .kadoves label[for=slaid2] {
-  background-color: #D41443;
+  background-color: var(--accent-color);
 }
 
 #slaid3:checked ~ .kadoves label[for=slaid3] {
-  background-color: #D41443;
+  background-color: var(--accent-color);
 }
 
 .adaptivny-slayder-lasekun {
@@ -2633,23 +2678,21 @@ button {
   transform: translateX(-200%);
 }
 
-.contacts__backdrop .is-hidden .modal {
-  transform: scale(0);
+.contacts__backdrop.is-hidden .modal__contacts {
+  transform: scale(0.8) translate(-50%, -50%);
+  transform-origin: center;
 }
 
 .contacts__backdrop {
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: scale(1);
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1), opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1), visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 100;
+  background-color: rgba(225, 121, 146, 0.2);
+  overflow-y: scroll;
+  transition: opacity 500ms ease, visibility 500ms ease;
 }
 .contacts__backdrop.is-hidden {
   opacity: 0;
@@ -2657,54 +2700,49 @@ button {
   visibility: hidden;
 }
 
-.modal-franchise__close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 2px solid #FFA5BA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-franchise__close:hover .modal-contacts__icon, .modal-franchise__close:focus .modal-contacts__icon {
-  fill: #D41443;
-}
-.modal-franchise__close:hover, .modal-franchise__close:focus {
-  border-color: #D41443;
-}
-
-.modal__franchise {
+.modal__contacts {
   position: absolute;
   padding: 40px;
-  margin-left: auto;
-  margin-right: auto;
+  top: 50%;
+  left: 50%;
   min-height: 500px;
-  border-radius: 24px;
   background-color: #FFF5F6;
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 24px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms ease, opacity 500ms ease, visibility 500ms ease;
+  transform-origin: center;
+  z-index: 10;
 }
 @media screen and (max-width: 480px) {
-  .modal__franchise {
+  .modal__contacts {
     padding: 40px 25px 25px 25px;
     width: 95vw;
   }
 }
 @media screen and (min-width: 480px) {
-  .modal__franchise {
+  .modal__contacts {
     width: 450px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .modal__franchise {
+  .modal__contacts {
     width: 528px;
     min-height: 581px;
   }
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  cursor: pointer;
+  fill: #FFA5BA;
+  transition: fill var(--main-transition);
+}
+.modal__close:hover, .modal__close:focus {
+  fill: var(--accent-color);
 }
 
 .modal-title-contact {
@@ -2714,7 +2752,7 @@ button {
   line-height: 1.13;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #D41443;
+  color: var(--accent-color);
   margin-bottom: 12px;
 }
 @media screen and (max-width: 480px) {
@@ -2736,7 +2774,7 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #D41443;
+  color: var(--accent-color);
   margin-bottom: 4px;
 }
 
@@ -2744,21 +2782,21 @@ button {
   width: 100%;
   height: 40px;
   border: 1px solid #FFA5BA;
-  color: #D41443;
+  color: var(--accent-color);
   border-radius: 4px;
   padding-left: 42px;
-  transition: border-color #D41443;
+  transition: border-color var(--accent-color);
 }
 
 .modal-user-coment {
   width: 100%;
   height: 120px;
   border: 1px solid #FFA5BA;
-  color: #D41443;
+  color: var(--accent-color);
   border-radius: 4px;
   padding: 12px 16px;
   resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--main-transition);
 }
 .modal-user-coment::-moz-placeholder {
   font-size: 12px;
@@ -2789,7 +2827,7 @@ button {
   left: 12px;
   transform: translateY(-50%);
   fill: #FFA5BA;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--main-transition);
 }
 
 .modal-field:focus-within .input-icon {
@@ -2811,13 +2849,13 @@ button {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.03em;
-  color: #D41443;
+  color: var(--accent-color);
   margin-bottom: 30px;
 }
 
 .modal-contacts__icon {
   fill: #FFA5BA;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--main-transition);
 }
 
 .button__modal {
@@ -2835,9 +2873,9 @@ button {
   margin-left: auto;
   margin-right: auto;
   color: #FFFFFF;
-  background-color: #D41443;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--accent-color);
+  transition: box-shadow var(--main-transition);
 }
 .button__modal:hover, .button__modal:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(212, 20, 67, 0.1);
 }/*# sourceMappingURL=index.css.map */
