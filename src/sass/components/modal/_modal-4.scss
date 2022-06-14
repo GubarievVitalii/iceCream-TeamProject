@@ -1,4 +1,4 @@
-.contacts__backdrop.is-hidden .modal__franchise {
+.contacts__backdrop.is-hidden .modal__contacts {
     transform: scale(0.8) translate(-50%, -50%);
     transform-origin: center;
 }
@@ -23,7 +23,7 @@
     }
 }
 
-.modal__franchise {
+.modal__contacts {
     position: absolute;
     padding: 40px;
     top: 50%;
@@ -44,34 +44,27 @@
         padding: 40px 25px 25px 25px;
         width: 95vw;
     }
-
     @media screen and (min-width: 480px) {
         width: 450px;
     }
-
     @media screen and (min-width: 1280px) {
         width: 528px;
         min-height: 581px;
     }
 }
 
-.modal-franchise__close {
+.modal__close {
     position: absolute;
     top: 15px;
     right: 15px;
-    width: 30px;
-    height: 30px;
-    background-color: transparent;
-    border: none;
     display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
+    fill: #FFA5BA;
     transition: fill var(--main-transition);
 
-    &:hover .modal-contacts__icon,
-    &:focus .modal-contacts__icon {
-        fill: #D41443;
+    &:hover,
+    &:focus {
+        fill: var(--accent-color);
     }
 }
 
@@ -82,14 +75,13 @@
     line-height: 1.13;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #D41443;
+    color: var(--accent-color);
     margin-bottom: 12px;
 
     @media screen and (max-width: 480px) {
         font-size: 24px;
         line-height: 1.1;
     }
-
 }
 
 .modal-field {
@@ -105,7 +97,7 @@
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    color: #D41443;
+    color: var(--accent-color);
     margin-bottom: 4px;
 }
 
@@ -113,17 +105,17 @@
     width: 100%;
     height: 40px;
     border: 1px solid #FFA5BA;
-    color: #D41443;
+    color: var(--accent-color);
     border-radius: 4px;
     padding-left: 42px;
-    transition: border-color #D41443;
+    transition: border-color var(--accent-color);
 }
 
 .modal-user-coment {
     width: 100%;
     height: 120px;
     border: 1px solid #FFA5BA;
-    color: #D41443;
+    color: var(--accent-color);
     border-radius: 4px;
     padding: 12px 16px;
     resize: none;
@@ -169,7 +161,7 @@
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0.03em;
-    color: #D41443;
+    color: var(--accent-color);
     margin-bottom: 30px;
 }
 
@@ -193,7 +185,7 @@
     margin-left: auto;
     margin-right: auto;
     color: #FFFFFF;
-    background-color: #D41443;
+    background-color: var(--accent-color);
     transition: box-shadow var(--main-transition);
 
     &:hover,
