@@ -65,7 +65,7 @@
             font-size: 18px;
             line-height: calc(21 / 18);
             width: 232px;
-            padding-bottom: 16px;
+            margin-bottom: 16px;
         }
 
         @include tablet {
@@ -90,12 +90,13 @@
             line-height: 39px;
             letter-spacing: 0.04em;
             width: 200px;
-            padding-bottom: 40px;
+            margin-bottom: 40px;
         }
 
         @include tablet {
             font-size: 48px;
             line-height: calc(55 / 48);
+            width: 340px;
         }
 
         @include desktop {
@@ -103,7 +104,7 @@
             line-height: calc(66 / 58);
             width: 474px;
             text-align: center;
-            padding-bottom: 60px;
+            margin-bottom: 60px;
         }
     }
 }
@@ -113,7 +114,7 @@
     list-style: none;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 
     &__item {
         cursor: pointer;
@@ -155,7 +156,7 @@
 .footer-address {
     @include mobile {
         display: block;
-        padding-bottom: 40px;
+        margin-bottom: 40px;
     }
 
     &__text {
@@ -216,7 +217,6 @@
         font-size: 14px;
         text-align: center;
         color: #907E82;
-        padding-right: 3px;
         letter-spacing: 0.02em;
 
         @include mobile {
