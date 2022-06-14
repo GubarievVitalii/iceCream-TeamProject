@@ -2,11 +2,11 @@
     padding-top: 40px;
     padding-bottom: 24px;
     @include tablet {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     }
     @include desktop {
     padding-top: 60px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     }
 }
 .customer-reviews .container {
