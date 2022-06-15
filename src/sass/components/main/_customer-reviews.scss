@@ -57,7 +57,11 @@
         height: 4px;
         background-image: url("/src/images/comments/product-3.png");
         background-repeat: no-repeat;
-        }
+    }
+        @media screen and (min-width: 321px) {
+        max-width: 280px;
+        &:before { top: -10%;} 
+    }
     @include tablet {
         max-width: 620px;
         padding: 0 50px 0 50px;
